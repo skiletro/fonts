@@ -20,7 +20,7 @@
           dontConfigue = true;
           src = pkgs.fetchzip {
             url = "https://befonts.com/wp-content/uploads/2021/11/Urbanist-master.zip";
-            sha256 = "4abe17d3e07e413be06855590245cdea8f37669d9e11dfa6e78f9f1750258857";
+            sha256 = "sha256-Bx1Clqk7u0bxDkiqZPX+ZIPC9JtXb6mnbZpDoKUpZys=";
             stripRoot = false;
           };
           installPhase = ''
