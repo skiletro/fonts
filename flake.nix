@@ -25,7 +25,7 @@
           };
           installPhase = ''
             mkdir -p $out/share/fonts
-            cp -R $src/fonts/otf $out/share/fonts/opentype
+            cp -R $src/Urbanist-master/fonts/otf $out/share/fonts/opentype
           '';
           meta = { description = "An Urbanist Font Family derivation."; };
         };
