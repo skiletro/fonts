@@ -27,7 +27,7 @@
             mkdir -p $out/share/fonts
             cp -R $src/fonts/otf $out/share/fonts/opentype
           '';
-          meta = { description = "An Urbanist Font Family derivation." };
+          meta = { description = "An Urbanist Font Family derivation."; };
         };
         
         packages.gillsans = pkgs.stdenvNoCC.mkDerivation {
