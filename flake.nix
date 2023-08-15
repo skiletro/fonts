@@ -15,6 +15,21 @@
             self.packages.${system}; # Add font derivation names here
         };
 
+        packages.urbanist = pkgs.stdenvNoCC.mkDerivation {
+          name = "urbanist-font";
+          dontConfigue = true;
+          src = pkgs.fetchzip {
+            url = "https://befonts.com/wp-content/uploads/2021/11/Urbanist-master.zip";
+            sha256 = "4abe17d3e07e413be06855590245cdea8f37669d9e11dfa6e78f9f1750258857";
+            stripRoot = false;
+          };
+          installPhase = ''
+            mkdir -p $out/share/fonts
+            cp -R $src/fonts/otf $out/share/fonts/opentype
+          '';
+          meta = { description = "An Urbanist Font Family derivation." };
+        };
+        
         packages.gillsans = pkgs.stdenvNoCC.mkDerivation {
           name = "gillsans-font";
           dontConfigue = true;
